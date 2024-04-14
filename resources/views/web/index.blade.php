@@ -14,6 +14,13 @@
 </form>
 
 <div id="driverInfo"></div> 
+
+<h3>Esto es un test de Api</h3>
+
+@foreach($Drivers as $driver)
+    <p>{{ $driver['GivenName'] }} {{$driver['FamilyName']}}</p>
+@endforeach
+
 @endsection
 
 @section('css')
