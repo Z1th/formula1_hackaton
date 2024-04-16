@@ -1,33 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
-:root{
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+
+:root {
     --primary-color: rgba(20, 177, 177, 0.5);
-    --overlay-color: rgba(24,39,51,0.85);
+    --overlay-color: rgba(24, 39, 51, 0.85);
     --menu-speed: 0.75s;
 }
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
-    font-family: 'Staatliches', cursive;
+
+body {
+    font-family: "Staatliches", cursive;
     line-height: 1.4;
+    background-color: black;
 }
-.container{
+.container {
     max-width: 960px;
     margin: auto;
     overflow: hidden;
     padding: 0 3rem;
 }
-.showcase{
+.showcase {
     color: #fff;
     height: 100vh;
     position: relative;
 }
-.showcase:before{
-    content: '';
-    background: url('https://images.pexels.com/photos/37839/pexels-photo-37839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover;
+.showcase:before {
+    content: "";
+    background: url("https://images.pexels.com/photos/37839/pexels-photo-37839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+        no-repeat center center/cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -35,7 +39,7 @@ body{
     height: 100%;
     z-index: -1;
 }
-.showcase .showcase-inner{
+.showcase .showcase-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,14 +47,14 @@ body{
     text-align: center;
     height: 100%;
 }
-.showcase h1{
+.showcase h1 {
     font-size: 4rem;
 }
-.showcase p{
+.showcase p {
     font-size: 1.3rem;
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
 }
-.btnn{
+.btnn {
     display: inline-block;
     border: none;
     background-color: var(--primary-color);
@@ -61,52 +65,52 @@ body{
     transition: opacity 1s ease-in;
     border-radius: 2rem;
 }
-.btnn:hover{
+.btnn:hover {
     opacity: 0.7;
 }
-.contact-links{
+.contact-links {
     display: flex;
     justify-content: center;
     width: 200px;
     max-width: 980px;
     flex-wrap: wrap;
-    margin-left: 54.5rem; 
+    margin-left: 54.5rem;
     margin-top: -12rem;
 }
-.contact-details{
+.contact-details {
     font-size: 1rem;
     margin-bottom: 1rem;
-    transition: transform 0.3s ease-out; 
-  }
-  .contact-details:hover{
+    transition: transform 0.3s ease-out;
+}
+.contact-details:hover {
     transform: translateY(5px);
-  }
-  .btn{
-      display: inline-block;
-        padding-right: 1rem;
-        text-decoration: none;
-        color: #fff;
-  }
-.menu-wrap{
+}
+.btn {
+    display: inline-block;
+    padding-right: 1rem;
+    text-decoration: none;
+    color: #fff;
+}
+.menu-wrap {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 99;
 }
-.menu-wrap .toggler{
+.menu-wrap .toggler {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 30px;
+    left: 60px;
     z-index: 2;
     cursor: pointer;
     width: 50px;
     height: 50px;
     opacity: 0;
 }
-.menu-wrap .hamburger{
+.menu-wrap .hamburger {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 30px;
+    left: 60px;
     z-index: 1;
     width: 60px;
     height: 60px;
@@ -117,7 +121,7 @@ body{
     justify-content: center;
 }
 /* Hamburger line */
-.menu-wrap .hamburger >div {
+.menu-wrap .hamburger > div {
     position: relative;
     width: 100%;
     height: 2px;
@@ -129,8 +133,8 @@ body{
 }
 /* Top and bottom lines */
 .menu-wrap .hamburger > div:before,
-.menu-wrap .hamburger > div:after{
-    content: '';
+.menu-wrap .hamburger > div:after {
+    content: "";
     position: absolute;
     z-index: 1;
     top: -10px;
@@ -139,49 +143,49 @@ body{
     background: inherit;
 }
 /* Moves line down */
-.menu-wrap .hamburger > div:after{
+.menu-wrap .hamburger > div:after {
     top: 10px;
 }
 /* Toggler animate */
-.menu-wrap .toggler:checked + .hamburger > div{
+.menu-wrap .toggler:checked + .hamburger > div {
     transform: rotate(135deg);
 }
 /* Turn Lines into X */
 .menu-wrap .toggler:checked + .hamburger > div:before,
-.menu-wrap .toggler:checked + .hamburger > div:after{
+.menu-wrap .toggler:checked + .hamburger > div:after {
     top: 0;
     transform: rotate(90deg);
 }
 /* Rotate on hover when checked */
-.menu-wrap .toggler:checked:hover + .hamburger > div{
+.menu-wrap .toggler:checked:hover + .hamburger > div {
     transform: rotate(225deg);
 }
 /* Show menu */
-.menu-wrap .toggler:checked ~ .menu{
+.menu-wrap .toggler:checked ~ .menu {
     visibility: visible;
 }
-.menu-wrap .toggler:checked ~ .menu > div{
+.menu-wrap .toggler:checked ~ .menu > div {
     transform: scale(1);
     transition-duration: var(--menu-speed);
 }
-.menu-wrap .toggler:checked ~ .menu > div > div{
+.menu-wrap .toggler:checked ~ .menu > div > div {
     opacity: 1;
     transition: opacity 0.4s ease;
 }
-.menu-wrap .menu{
+.menu-wrap .menu {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-     visibility: hidden; 
+    visibility: hidden;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.menu-wrap .menu > div{
-    background-color: var(--overlay-color);
+.menu-wrap .menu > div {
+    background-color: #000c;
     border-radius: 50%;
     width: 200vw;
     height: 200vw;
@@ -189,14 +193,14 @@ body{
     flex: none;
     align-items: center;
     justify-content: center;
-     transform: scale(0); 
+    transform: scale(0);
     transition: all 0.4s ease;
 }
-.menu-wrap .menu > div >div{
+.menu-wrap .menu > div > div {
     text-align: center;
     max-width: 90vw;
     max-height: 100vh;
-     opacity: 0; 
+    opacity: 0;
     transition: opacity 0.4s ease;
 }
 .menu-wrap .menu > div > div > ul > li {
@@ -206,8 +210,151 @@ body{
     padding: 1rem;
 }
 
-.menu-wrap .menu >div > div > ul > li > a{
+.menu-wrap .menu > div > div > ul > li > a {
     color: inherit;
     text-decoration: none;
     transition: color 0.4s ease;
+}
+
+/*** 
+
+====================================================================
+	Banner One
+====================================================================
+
+***/
+
+.banner-one {
+    position: relative;
+    text-align: center;
+    padding: 170px 0px 70px;
+    height: 500px;
+}
+
+.banner-one .owl-dots,
+.banner-one .owl-nav {
+    display: none;
+}
+
+.banner-one img {
+    object-fit: cover;
+    filter: brightness(15%);
+}
+
+.carousel {
+    height: 500px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: unset;
+    border: 3px solid gray;
+    margin-bottom: 2px;
+}
+
+.carousel-indicators .active {
+    border: 3px solid #ba0000;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    height: 100%;
+}
+
+#navbar {
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
+
+.carousel-caption {
+    bottom: 32%;
+    left: 25%;
+    right: 20%;
+    text-align: left;
+    z-index: 99;
+}
+
+.carousel-caption h1 {
+    font-size: 5rem;
+    line-height: 0.8;
+}
+
+.carousel-caption h4 {
+    color: #fb7a7a;
+}
+
+.btnSlider {
+    background-color: #a90101;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.logo {
+    position: absolute;
+    top: 25px;
+    right: 120px;
+    width: 80px;
+    height: 80px;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.pretty_cards {
+    margin-top: -60px;
+    position: relative;
+}
+
+.bg-red {
+    background-color: #a90101;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-gray {
+    background-color: gray;
+}
+
+.cards_one {
+    color: white;
+    height: 90px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.cards_one h4 {
+    font-size: 35px;
+    margin: 0;
+}
+
+.cards_one a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.icon-float {
+    position: relative;
+    left: 230px;
+    bottom: 45px;
 }
