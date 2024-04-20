@@ -111,6 +111,117 @@
         </div>
     </section>
 
+    <section class="circuitos">
+        <div class="container">
+            <div class="circuitos-carousel owl-carousel owl-theme">
+                <div class="row">
+                    <div class="col-lg-6 text">
+                        <span class="nameCircuito">Lenovo Chinese Grand Prix</span>
+                        <h4 class="timer">Practice 1: <span class="count">11D:15H:26M</span></h4>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="contenedorCircuitoImage">
+                            <img src="{{ asset('assets/images/circuitos/China_Circuit.avif') }}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 text">
+                        <span class="nameCircuito">Miami Grand Prix</span>
+                        <h4 class="timer">Practice 1: <span class="count">INCOMING</span></h4>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="contenedorCircuitoImage">
+                            <img src="{{ asset('assets/images/circuitos/Miami_Circuit.avif') }}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 text">
+                        <span class="nameCircuito">E DELL'EMILIA-ROMAGNA Grand Prix</span>
+                        <h4 class="timer">Practice 1: <span class="count">INCOMING</span></h4>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="contenedorCircuitoImage">
+                            <img src="{{ asset('assets/images/circuitos/Imola_Circuit.avif') }}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 text">
+                        <span class="nameCircuito">Monaco Grand Prix</span>
+                        <h4 class="timer">Practice 1: <span class="count">INCOMING</span></h4>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="contenedorCircuitoImage">
+                            <img src="{{ asset('assets/images/circuitos/Monaco_Circuit.png') }}">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title">News</h2>
+                </div>
+
+                <div class="news-carousel owl-carousel owl-theme">
+
+                    <div class="cards_blog">
+                        <div class="top-container">
+                            <img src="{{ asset('assets/images/blog/lw-ferrari.jpg') }}">
+                        </div>
+                        <div class="bottom-container">
+                            <h4 class="title">Mercedes To Ferrari</h4>
+                            <span class="category">HEADLINES</span>
+                            <span class="desc">For the first time in seven year, Lewis Hamilton will no longer lineup in
+                                the...</span>
+                            <a href="#" class="btn-blog">Show More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="cards_blog">
+                        <div class="top-container">
+                            <img src="{{ asset('assets/images/blog/chinese-blog-notforgett.avif') }}">
+                        </div>
+                        <div class="bottom-container">
+                            <h4 class="title">Vuelve GP de China</h4>
+                            <span class="category">HEADLINES</span>
+                            <span class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, nisi
+                                cum...</span>
+                            <a href="#" class="btn-blog">Show More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="cards_blog">
+                        <div class="top-container">
+                            <img src="{{ asset('assets/images/blog/sainz-ferrari-blog.avif') }}">
+                        </div>
+                        <div class="bottom-container">
+                            <h4 class="title">Sainz has plenty of choice</h4>
+                            <span class="category">HEADLINES</span>
+                            <span class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, nisi
+                                cum...</span>
+                            <a href="#" class="btn-blog">Show More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 
 @endsection
 
@@ -119,4 +230,20 @@
 
 @section('scripts')
     <script src="{{ asset('assets/js/peticion_api.js') }}"></script>
+    <script>
+        $('.circuitos-carousel').owlCarousel({
+            loop: true,
+            items: 1,
+            nav: true,
+            dots: false,
+        });
+
+        $('.news-carousel').owlCarousel({
+            loop: true,
+            items: 3,
+            margin:20,
+            nav: false,
+            dots: true,
+        });
+    </script>
 @stop
