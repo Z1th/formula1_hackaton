@@ -1,3 +1,7 @@
+@php
+    use App\Http\Controllers\Web\FunctionsController;
+    $fn = new FunctionsController();
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,9 +56,42 @@
 
     @yield('contenido-principal')
 
-    <footer>
+    <div class="container footer">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a href="#" class="nav-link">
+                        <img src="{{ asset('assets/images/formula1_logo.png') }}"> Our Partners <i
+                            class="fa fa-chevron-right"></i></a>
+                </li>
+            </ul>
+            <div class="row contenedor-partners">
+                <div class="col-2 img-partner">
+                    <img src="{{ asset('assets/images/partners/rolex.png') }}" alt="">
+                </div>
+                <div class="col-2 img-partner">
+                    <img src="{{ asset('assets/images/partners/pirelli.png') }}" alt="">
+                </div>
+                <div class="col-2 img-partner">
+                    <img src="{{ asset('assets/images/partners/aramco.png') }}" alt="">
+                </div>
+                <div class="col-2 img-partner">
+                    <img src="{{ asset('assets/images/partners/dhl.png') }}" alt="">
+                </div>
+                <div class="col-2 img-partner">
+                    <img src="{{ asset('assets/images/partners/msc.png') }}" alt="">
+                </div>
+                <div class="col-2 img-partner">
+                    <img src="{{ asset('assets/images/partners/aws-global.png') }}" alt="">
+                </div>
 
-    </footer>
+                <div class="col-lg-12 copyright_footer">
+                    <p class="text-center">© 2024 Desarrollado por <a href="https://www.linkedin.com/in/hermar-lopez/"
+                            target="_BLANK">Hermar López</a></p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
         crossorigin="anonymous"></script>
